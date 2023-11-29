@@ -1,11 +1,161 @@
-<section>
-  <main>
-    <h1>Contemporary Net Art</h1>
-    <h2>by memphis</h2>
-    <marquee>memphis website</marquee>
-    <p>
-    this is my practice <a href="https://netizen.org" target="_blank">code</a> for internet art i
-    </p>
-    <img src="images/gifs/.gif" alt="description of image">
-  </main>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Gardens</title>
+  <style>
+    
+    body {
+      background-color: #f2f2f2; /* Light gray background */
+      margin: 0;
+      font-family: "Courier New", serif;
+    }
+    
+    .gallery-header {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+/*     .white-box {
+      background-color: #fff;
+      padding: 50px;
+      height: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+    } */
+    
+    .white-box {
+      top: 2%;
+    	width: 100%;
+      height: 35px;
+      background: white;
+      border-radius: 5px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    
+     .video-container {
+      top: 10%;
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-top: 30px;
+      background-color: #f2f2f2;
+      padding: 20px;
+/*       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    }
+    
+/*     .gallery {
+      background-color: gray;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    } */
+   
+    .video-box {
+      position: relative;
+      display: inline-block;
+		}
+
+    .thumbnail {
+      width: 60px;
+      height: 80px;
+      cursor: pointer;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .video-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .close {
+      color: #fff;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+  
+<div class="gallery-header">
+    <h1>digital garden</h1>
+    <p>frequently used emojis, frequently thought about writing, frequently viewed images</p>
+  </div>
+
+<!--   <div class="white-box">
+    <p>This is a white rectangular box above the thumbnails.</p>
+  </div> -->
+  
+  <div class="white-box"></div>
+
+  <div class="video-container">
+    <!-- Thumbnails and videos -->
+    <div class="video-box" data-video="your-video-id-1">
+      <img src="jar.jpg" alt="jar" class="thumbnail">
+      <div class="overlay"></div>
+    </div>
+    <div class="video-modal" id="modal-1">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const overlays = document.querySelectorAll(".overlay");
+  const videoModals = document.querySelectorAll(".video-modal");
+  const closeButtons = document.querySelectorAll(".close");
+
+  overlays.forEach((overlay, index) => {
+    overlay.addEventListener("click", function() {
+      videoModals[index].style.display = "block";
+      const videoId = overlay.parentElement.getAttribute("data-video");
+      videoModals[index].querySelector("iframe").src = `https://www.youtube.com/embed/${videoId}`;
+    });
+  });
+
+  closeButtons.forEach((closeButton) => {
+    closeButton.addEventListener("click", function() {
+      closeButton.parentElement.parentElement.style.display = "none";
+      closeButton.parentElement.querySelector("iframe").src = "";
+    });
+  });
+});
+</script>
+
+</body>
+</html>
+
