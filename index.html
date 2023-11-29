@@ -33,6 +33,15 @@
 /*       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     }    
     
+    .search-bar {
+      font-size: 16px;
+      color: gray;
+      font-family: Arial, sans-serif;
+      position: absolute;
+      top: 25%;
+      left: 4%;
+    }
+    
     .mag-glass {
       position: absolute;
       top: 3px;
@@ -145,6 +154,7 @@
   <div class="additional-text">
       <h2>FREQUENTLY USED</h2>
     </div>
+  <div class="search-bar">Search Emoji</div>
 <!--   <img src="mag-glass-transparent.png" alt="search bar" id="mag-glass"> -->
 
   <div class="video-container">
@@ -173,6 +183,17 @@
     
     <div class="video-box" data-video="your-video-id-3">
       <img src="wine-transparent.png" alt="Thumbnail Image 3" class="thumbnail">
+      <div class="overlay"></div>
+    </div>
+    <div class="video-modal" id="modal-3">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    
+        <div class="video-box" data-video="your-video-id-3">
+      <img src="bouquet-transparent.png" alt="Thumbnail Image 3" class="thumbnail">
       <div class="overlay"></div>
     </div>
     <div class="video-modal" id="modal-3">
