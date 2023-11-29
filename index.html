@@ -17,6 +17,28 @@
       text-align: center;
     }
     
+    .additional-text {
+/*       background-color: #f9f9f9; */
+      font-size: 9px;
+      color: gray;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      position: absolute;
+      top: 200px;
+      left: 9%;
+      transform: translateX(-50%);
+      height: 20px;
+      width: 80%;
+      text-align: center;
+/*       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    }    
+    
+    .mag-glass {
+      top: 30px;
+      width: 30px;
+      height: 40px;
+    }
+    
 /*     .white-box {
       background-color: #fff;
       padding: 50px;
@@ -119,14 +141,39 @@
   </div> -->
   
   <div class="white-box"></div>
+  <div class="additional-text">
+      <h2>FREQUENTLY USED</h2>
+    </div>
 
   <div class="video-container">
     <!-- Thumbnails and videos -->
     <div class="video-box" data-video="your-video-id-1">
-      <img src="jar.jpg" alt="jar" class="thumbnail">
+      <img src="jar-transparent.png" alt="jar" class="thumbnail">
       <div class="overlay"></div>
     </div>
     <div class="video-modal" id="modal-1">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    
+   <div class="video-box" data-video="your-video-id-2">
+      <img src="cow-transparent.png" alt="Thumbnail Image 2" class="thumbnail">
+      <div class="overlay"></div>
+    </div>
+    <div class="video-modal" id="modal-2">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    
+    <div class="video-box" data-video="your-video-id-3">
+      <img src="wine-transparent.png" alt="Thumbnail Image 3" class="thumbnail">
+      <div class="overlay"></div>
+    </div>
+    <div class="video-modal" id="modal-3">
       <div class="modal-content">
         <span class="close">&times;</span>
         <iframe src="" frameborder="0" allowfullscreen></iframe>
