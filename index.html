@@ -15,6 +15,7 @@
       background-color: #f0c7d5;
       padding: 20px;
       text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     
     .additional-text {
@@ -38,25 +39,17 @@
       color: gray;
       font-family: Arial, sans-serif;
       position: relative;
-      top: -14%;
+      top: -13%;
       left: 7%;
     }
     
     .mag-glass {
       position: relative;
-      top: -18%;
+      top: -17%;
       left: 0%;
       width: 37px;
       height: 30px;
     }
-    
-/*     .white-box {
-      background-color: #fff;
-      padding: 50px;
-      height: 10px;
-      margin-bottom: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
-    } */
     
     .white-box {
       top: 2%;
@@ -66,6 +59,7 @@
       border-radius: 5px;
       position: relative;
       margin-bottom: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     
      .video-container {
@@ -77,13 +71,6 @@
       padding: 20px;
 /*       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     }
-    
-/*     .gallery {
-      background-color: gray;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    } */
    
     .video-box {
       position: relative;
@@ -145,22 +132,17 @@
   
 <div class="gallery-header">
     <h1>frequented</h1>
-    <p>pretty emojis paired with poems i think about a lot</p>
+    <p></p>
   </div>
-
-<!--   <div class="white-box">
-    <p>This is a white rectangular box above the thumbnails.</p>
-  </div> -->
   
   <div class="white-box"></div>
   <div class="additional-text">
       <h2>FREQUENTLY USED</h2>
     </div>
-  <div class="search-bar">Search Emoji</div>
+  <div class="search-bar">pretty emojis paired with words i think about a lot</div>
   <img src="mag-glass-transparent.png" alt="search bar" class="mag-glass">
 
   <div class="video-container">
-    <!-- Thumbnails and videos -->
     <div class="video-box" data-video="-Jrrytx5yQQ">
       <img src="jar-transparent.png" alt="jar" class="thumbnail">
       <div class="overlay"></div>
@@ -195,10 +177,21 @@
     </div>
     
         <div class="video-box" data-video="Ti9U88twDoM">
-      <img src="bouquet-transparent.png" alt="Thumbnail Image 3" class="thumbnail">
+      <img src="bouquet-transparent.png" alt="Thumbnail Image 4" class="thumbnail">
       <div class="overlay"></div>
     </div>
     <div class="video-modal" id="modal-4">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe src="https://www.youtube.com/watch?v=Ti9U88twDoM" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    
+        <div class="video-box" data-video="Ti9U88twDoM">
+      <img src="train-transparent.png" alt="Thumbnail Image 5" class="thumbnail">
+      <div class="overlay"></div>
+    </div>
+    <div class="video-modal" id="modal-5">
       <div class="modal-content">
         <span class="close">&times;</span>
         <iframe src="https://www.youtube.com/watch?v=Ti9U88twDoM" frameborder="0" allowfullscreen></iframe>
